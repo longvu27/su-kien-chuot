@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <img style="width: 100px" id="image" src="https://james.codegym.vn/pluginfile.php/64921/mod_assign/intro/1.png" >
+    <p> click đi</p>
+    <input type="button" value="Click lẹ lơn" onclick="moveRight()">
+</form>
+
+<script>
+    let img = null;
+    img = document.getElementById('image');
+    function init () {
+        img = document.getElementById('image');
+        img.style.position = 'relative';
+        img.style.left = '0px';
+        img.style.top = '0px';
+    }
+    function moveRight () {
+        img.style.left = parseInt(img.style.left) + 10 +'px';
+        img.style.top = parseInt(img.style.top) + 10 + 'px';
+    }
+    window.onload = init;
+</script>
+</body>
+</html>
